@@ -82,27 +82,34 @@
 
     <!-- Initialize Swiper -->
     <script>
+      // Initialize Swiper slider
       var swiper = new Swiper(".mySwiper", {
+        // Navigation buttons
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next", // Next button selector
+          prevEl: ".swiper-button-prev", // Previous button selector
         },
+
+        // Autoplay configuration
         autoplay: {
-          delay: 3000, // Time between slides in milliseconds (3000ms = 3 seconds)
-          disableOnInteraction: false, // Keeps autoplay running even after user interaction
+          delay: 3000, // Time between slides (3 seconds)
+          disableOnInteraction: false, // Keep autoplay active even after interaction
         },
+
+        // Loop configuration
         loop: true,
-        // Responsive breakpoints
+
+        // Breakpoints for responsiveness
         breakpoints: {
-          // When window width is >= 640px (tablet and larger screens)
+          // For screen widths >= 640px (tablets and larger screens)
           640: {
-            slidesPerView: 4, // Show 2 items per slide
-            spaceBetween: 20, // Optional spacing between slides
+            slidesPerView: 4, // Number of slides visible
+            spaceBetween: 20, // Space between slides
           },
-          // When window width is < 640px (mobile screens)
+          // For screen widths < 640px (mobile screens)
           0: {
-            slidesPerView: 1, // Show 1 item per slide
-            spaceBetween: 10, // Optional spacing for smaller screens
+            slidesPerView: 1, // Number of slides visible
+            spaceBetween: 10, // Space between slides
           },
         },
       });
