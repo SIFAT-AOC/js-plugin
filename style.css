@@ -1,0 +1,155 @@
+/* ---- reset ---- */
+/* Set the background of the page */
+body {
+  background-color: #0c063e;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* Style the heading container */
+.heading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 50px 0;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.moon-text {
+  font-size: 60px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5),
+    rgba(150, 150, 255, 0.5),
+    rgba(255, 255, 255, 0.8)
+  );
+
+  text-align: center;
+  background-size: 400% 400%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient-animation 5s ease infinite,
+    moonlight 3s ease-in-out infinite;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 15px rgba(255, 255, 255, 0.5);
+}
+.aboutmoonLit {
+  font-size: 30px;
+  text-transform: capitalize;
+  color: #fefefe;
+  font-family: cursive;
+  text-align: center;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 10%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moonlight {
+  0% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.7),
+      0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.9),
+      0 0 40px rgba(255, 255, 255, 0.7), 0 0 70px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.7),
+      0 0 15px rgba(255, 255, 255, 0.5);
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+} /* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #0c063e;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* swiper slide iconn  */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: 10px;
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5df41 !important;
+}
+
+@media (max-width: 767px) {
+  canvas {
+    height: 300px; /* Adjust this height as necessary */
+  }
+  .moon-text {
+    font-size: 40px;
+  }
+  #particles-js {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+}
