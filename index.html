@@ -71,5 +71,55 @@
     </div>
     <script src="./particles.js"></script>
     <script src="./app.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      // Initialize Swiper slider
+      var swiper = new Swiper(".mySwiper", {
+        // Navigation buttons
+        navigation: {
+          nextEl: ".swiper-button-next", // Next button selector
+          prevEl: ".swiper-button-prev", // Previous button selector
+        },
+
+        // Autoplay configuration
+        autoplay: {
+          delay: 3000, // Time between slides (3 seconds)
+          disableOnInteraction: false, // Keep autoplay active even after interaction
+        },
+
+        // Loop configuration
+        loop: true,
+
+        // Breakpoints for responsiveness
+        breakpoints: {
+          // For screen widths >= 640px (tablets and larger screens)
+          640: {
+            slidesPerView: 4, // Number of slides visible
+            spaceBetween: 20, // Space between slides
+          },
+          // For screen widths < 640px (mobile screens)
+          0: {
+            slidesPerView: 1, // Number of slides visible
+            spaceBetween: 10, // Space between slides
+          },
+        },
+      });
+    </script>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>
